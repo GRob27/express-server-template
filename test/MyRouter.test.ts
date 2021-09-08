@@ -17,7 +17,7 @@ describe("GET /", () => {
 			"/"
 		);
 		expect(response.status).toBe(200);
-		expect(response.text).toBe("{\"message\":\"Hello World\"}");
+		expect(response.body).toMatchObject({ message: "Hello World" });
 	});
 });
 

@@ -20,6 +20,7 @@ describe("Object comparator", () => {
 		const object2 = new DummyObject(2);
 		expect(object1.compareTo(object2)).toEqual(-1);
 	});
+	
 	it("Should sort the array in place", async () => {
 		const array = [
 			new DummyObject(2),

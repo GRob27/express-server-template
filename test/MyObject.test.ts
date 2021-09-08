@@ -8,8 +8,8 @@ describe("MyObject", () => {
 		record3.setId("setted");
 		expect(record1.getId()).toBe("789-123");
 		expect(record1.compareTo(record2)).toBe(1);
-    expect(record1.compareTo(record3)).toBe(-1);
-    expect(record2.compareTo(record2)).toBe(0);
+		expect(record1.compareTo(record3)).toBe(-1);
+		expect(record2.compareTo(record2)).toBe(0);
 		expect(record3.getId()).toBe("setted");
 	});
 });

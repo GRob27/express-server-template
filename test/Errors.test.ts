@@ -11,16 +11,19 @@ describe("Test integrity of error messages", () => {
 		expect(error.message).toEqual("Exists");
 		expect(error.getCode()).toEqual(409);
 	});
+
 	it("Forbidden access error should be 403", () => {
 		const error = new ForbiddenAccessError("Forbidden");
 		expect(error.message).toEqual("Forbidden");
 		expect(error.getCode()).toEqual(403);
 	});
+
 	it("Internal servor error should be 500", () => {
 		const error = new InternalServerError("Internal");
 		expect(error.message).toEqual("Internal");
 		expect(error.getCode()).toEqual(500);
 	});
+
 	it("Invalid parameter error should be 400", () => {
 		const error = new InvalidParameterError("Invalid");
 		expect(error.message).toEqual("Invalid");
