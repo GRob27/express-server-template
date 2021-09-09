@@ -1,7 +1,7 @@
 import { RecordFactory } from "../src/core/models/Record";
 
 describe("MyObject", () => {
-	it("property should correspond to what is initialized", async () => {
+	it("property should correspond to what is initialized", () => {
 		const record1 = RecordFactory.getObject("789-123");
 		const record2 = RecordFactory.getObject("189-123");
 		const record3 = RecordFactory.getObject("");

@@ -1,22 +1,19 @@
-import { events } from "../src/core/observer/events";
+import type { events } from "../src/core/observer/events";
 import Observable from "../src/core/observer/Observable";
-import Observer from "../src/core/observer/Observer";
+import type Observer from "../src/core/observer/Observer";
 
-class DummyObservable extends Observable {
-	constructor() {
-		super();
-	}
-}
+class DummyObservable extends Observable {}
 
 class DummyObserver implements Observer {
-	event!: events;
-	notify(event: events): void {
+	public event!: events;
+
+	public notify(event: events): void {
 		this.event = event;
 	}
 }
 
 describe("Observers", () => {
-	it("observables notify on values to observers", async () => {
+	it("observables notify on values to observers", () => {
 		const observable = new DummyObservable();
 		const observer = new DummyObserver();
 		observable.attach(observer);

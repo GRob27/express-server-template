@@ -19,7 +19,7 @@ describe("Express application is unique", () => {
 });
 
 describe("GET /bo/gu/s/URL/", () => {
-	it("Call responds with bad request when bogus URL is sent.", async () => {
+	it("Call responds with bad request when bogus URL is sent.", async() => {
 		const response = await supertest(App.getInstance().getExpressApp()).get(
 			"/bo/gu/s/URL/"
 		);

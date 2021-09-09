@@ -8,7 +8,7 @@ class DummyObject extends Record {
 }
 
 describe("Object collection", () => {
-	it("should contain items added to the collection", async () => {
+	it("should contain items added to the collection", () => {
 		const object1 = new DummyObject("4");
 		const object2 = new DummyObject("2");
 		const collection = new Collection<DummyObject>();
@@ -26,7 +26,7 @@ describe("Object collection", () => {
 		expect(iterator.next()).toEqual(object2);
 		expect(iterator.hasNext()).toEqual(false);
 	});
-	it("iterator should manage the state of the collection", async () => {
+	it("iterator should manage the state of the collection", () => {
 		const object1 = new DummyObject("4");
 		const object2 = new DummyObject("2");
 		const collection = new Collection<DummyObject>();

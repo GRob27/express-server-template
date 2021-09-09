@@ -12,7 +12,7 @@ describe("Router class is a singleton", () => {
 });
 
 describe("GET /", () => {
-	it("Expects FUCKS not given error", async () => {
+	it("Expects FUCKS not given error", async() => {
 		const response = await supertest(App.getInstance().getExpressApp()).get(
 			"/"
 		);
@@ -22,7 +22,7 @@ describe("GET /", () => {
 });
 
 describe("GET /throws", () => {
-	it("Expects FUCKS not given error", async () => {
+	it("Expects FUCKS not given error", async() => {
 		const response = await supertest(App.getInstance().getExpressApp()).get(
 			"/throws"
 		);
