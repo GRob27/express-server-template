@@ -1,6 +1,10 @@
 class Logger {
 	public static log(message: string): void {
-		console.log(message);
+		new Logger().getLoggingStrategy().log(message);
+	}
+
+	public getLoggingStrategy(): Console {
+		return console;
 	}
 }
 

@@ -9,5 +9,6 @@ describe("Error Handler can handle errors", () => {
 			new AlreadyExistsError("Ressource already exists")
 		);
 		ErrorHandler.handleError(null, new Error("Error"));
+		expect(ErrorHandler.getInstance().getErrors()).toBe(2);
 	});
 });
